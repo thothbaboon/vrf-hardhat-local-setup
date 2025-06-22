@@ -1,0 +1,20 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "type-abi": "npx hardhat run scripts/wrapAbi.ts && npx typechain --target ethers-v6 --out-dir types abi/VRFCoordinatorV2_5Mock.json",
+    "compile": "npx hardhat compile && node scripts/copyAbi.js",
+    "test": "npx hardhat test"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "hardhat": "^2.24.3",
+    "typechain": "^8.3.2"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^1.4.0",
+    "ethers": "^6.14.4",
+    "prettier": "^3.5.3"
+  }
+}
